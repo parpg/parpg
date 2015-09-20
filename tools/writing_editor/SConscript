@@ -1,0 +1,12 @@
+Import('environment')
+
+install_executable = environment.InstallExecutable(
+    '$TOOLS_DIR/writing_editor',
+    'run.py',
+)
+install_data = environment.InstallReadOnly(
+    '$TOOLS_DIR/writing_editor',
+    ['data', 'docs', 'lib', 'scripts', 'ui'],
+)
+
+Return([install_executable, install_data])

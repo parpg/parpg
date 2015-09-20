@@ -1,0 +1,20 @@
+[Font/FreeMono]
+
+type: truetype
+source: fonts/freefont/FreeMono.ttf
+size: 14
+
+antialias: 1
+
+color: 0,0,0
+
+[Font/FreeMono_Red]
+
+type: truetype
+source: fonts/freefont/FreeMono.ttf
+size: 16
+
+antialias: 1
+
+color: 255,0,0
+

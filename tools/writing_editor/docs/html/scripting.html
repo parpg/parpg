@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+<body>
+<center><h2>Scripting</h2></center>
+<h3>Overview</h3>
+<p>PARPG writing will use a custom scripting language that resembles BASIC in it's syntax. All of the functions will be explained here. If you are stuck on something, a good place to look would be the example. Instructions for further help can be found on the home page.</p>
+<h3>General Help</h3>
+<p>You can declare and set variables just like most languages: variable = value.</p>
+<h3>Functions</h3>
+<p>The functions will be listed here in all uppercase. However, when you use a function, it can be either <b>all</b> uppercase or <b>all</b> lowercase. For example, say is valid, SAY is valid, but Say or sAy is not valid.</p>
+
+<h4>SAY<br/>----------</h4>
+<p>[who_says_it] SAY [what_to_say]<br/>
+SAY is used to have a character say something</p>
+<p>Example Usage:<br/>Henry SAY "hello"</p>
+
+<h4>SCRIPTNAME<br/>----------</h4>
+<p>SCRIPTNAME [script_name]<br/>
+SCRIPTNAME is used to define the script's name</p>
+<p>Example Usage:<br/>SCRIPTNAME "Script Name"</P>
+
+<h4>NPC<br/>----------</h4>
+<p>NPC [name]<br/>
+NPC is used to define an NPC within the script.</p>
+<p>Example Usage:<br/>NPC Henry</p>
+
+<h4>PC<br/>----------</h4>
+<p>PC is used to reference the player.</p>
+<p>Example Usage:<br/>PC SAY "hello"</p>
+<h4>
+
+<h4>SECTION<br/>----------</h4>
+<p>SECTION [name]<br/>
+  ENDSECTION<br/>
+  CALLSECTION [name]<br/>
+SECTION is used to make a block of dialog that can be called at anytime.</P>
+<p>Example Usage:<br/>
+SECTION SayHello<br/>
+...code goes here...<br/>
+ENDSECTION<br/>
+...later on in the script...<br/>
+CALLSECTION SayHello</p>
+
+<h4>OPTION<br/>----------</h4>
+<p>OPTION [name]<br/>
+[number] [text] [function]<br/>
+ENDOPTION<br/>
+OPTION is used to create a choice for the user to pick what his/her character will say.</p>
+<p>Example Usage:<br/>
+OPTION exampleOption
+1 "Example 1" function1
+2 "Example 2" function2
+...etc...
+ENDOPTION</p>
+
+<h4>PLAYSOUND<br/>----------</h4>
+<p>PLAYSOUND [sound_file] [num_of_times]<br/>
+PLAYSOUND is used to play a sound in the game</p>
+<p>Example Usage:<br/>
+PLAYSOUND "testsound.wav" 3</p>
+
+<h4>ATTACK<br/>----------</h4>
+<p>[attacker] ATTACK [victim]<br/>
+ATTACK is used to have someone attack someone in the game.</p>
+<p>Example Usage:<br/>
+Henry ATTACK Joe</p>
+
+<h4>RETURN<br/>----------</h4>
+<p>RETURN [variable1] [variable2] etc.<br/>
+RETURN is used to end the script and then tell the game the state of the variables given.</p>
+<p>Example Usage:<br/>
+guardDead = True<br/>
+RETURN guardDead</p>
+
+<h4>IF/ELIF/ELSE<br/>----------</h4>
+<p>IF [variable] == [value]<br/>
+  ELIF [variable] == [value]<br/>
+  ELSE<br/>
+  IF/ELIF/ELSE statements are used to have a flow of logic. Basically you would be say if this, then this, else if this, then this, else this.</p>
+<p>Example Usage:<br/>IF variable == 1:<br/>    do something<br/>ELIF variable == 2:
+  <br/>    do something<br/>ELSE:<br/>    do something</p>
+<p>Note: You do not have to have IF then ELSE then ELIF. You could have IF->ELSE, IF->ELIF, or just IF. You can also have as many ELIF's as you want.</p>

@@ -1,0 +1,12 @@
+Import('environment')
+
+install_executables = environment.InstallExecutable(
+    '$TOOLS_DIR/dialog_editor',
+    ['dialog_editor.py', 'source_editor.py'],
+)
+install_data = environment.InstallReadOnly(
+    '$TOOLS_DIR/dialog_editor',
+    'ui',
+)
+
+Return([install_executables, install_data])

@@ -1,0 +1,53 @@
+<VBox>
+  <HBox name="menuBar">
+    <Button name="exitButton" text="Exit"></Button>
+  </HBox>
+  <VBox hexpand="1">
+    <ScrollArea name="widgetPreview"></ScrollArea>
+    <HBox>
+      <VBox name="toolbox" min_size="0,300" hexpand="1">
+        <HBox name="tabs">
+          <Button name="xmlEditorTab" text="XML Editor" hexpand="0"></Button>
+          <Button name="consoleTab" text="Console" hexpand="0"></Button>
+          <Spacer></Spacer>
+        </HBox>
+        <ScrollArea name="editor" background_color="250,250,250">
+        </ScrollArea>
+        <HBox>
+          <Button name="reloadButton" text="Reload XML" hexpand="0"></Button>
+          <Button name="saveButton" text="Save XML" hexpand="0"></Button>
+          <Button name="applyButton" text="Apply" hexpand="0"></Button>
+          <Spacer></Spacer>
+        </HBox>
+      </VBox>
+      <VBox hexpand="1">
+        <HBox padding="0">
+          <HBox base_color="250,250,250">
+            <Label name="propertyNameColumnTitle" text="Name" font="FreeMono"
+                   background_color="250,250,250">
+            </Label>
+          </HBox>
+          <HBox base_color="250,250,250">
+            <Label name="propertyValueColumnTitle" text="Value" font="FreeMono"
+                   background_color="250,250,250">
+            </Label>
+          </HBox>
+        </HBox>
+        <ScrollArea name="propertyViewer" background_color="250,250,250"
+                    min_size="100,100">
+          <HBox name="propertyColumns" padding="0"
+                base_color="250,250,250" hexpand="1">
+            <VBox name="propertyNameColumnRows" border_size="1" padding="0"
+                  hexpand="1">
+            </VBox>
+            <VBox name="propertyValueColumnRows" border_size="1" padding="0"
+                  hexpand="1">
+            </VBox>
+          </HBox>
+        </ScrollArea>
+      </VBox>
+    </HBox>
+    <Label name="statusBar" background_color="250,250,250" font="FreeMono_Red"
+           hexpand="1"></Label>
+  </VBox>
+</VBox>

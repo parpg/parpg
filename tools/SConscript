@@ -1,0 +1,14 @@
+Import('environment')
+
+environment['TOOLS_DIR'] = '$DATA_DIR/tools'
+
+install_dialog_editor = SConscript('dialog_demo')
+install_map_editor = SConscript('map_editor')
+install_object_xml_generator = SConscript('object_xml_editor')
+install_pychan_designer = SConscript('pychan_designer')
+install_utilities = SConscript('utilities')
+install_writing_editor = SConscript('writing_editor')
+
+Return([install_dialog_editor, install_map_editor,
+        install_object_xml_generator, install_pychan_designer,
+        install_utilities, install_writing_editor])

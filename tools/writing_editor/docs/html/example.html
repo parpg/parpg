@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+<body>
+<center><h2>Dialog Example</h2></center>
+<p>SCRIPTNAME "Test Script" # SCRIPTNAME [script_name]</p>
+<p>/* Multline comments like C++ */</p>
+<p># Define characters. Kind of like C++ where you declare their class<br/>
+NPC Guard</p>
+<p>SECTION MainDialog # A section of dialog. If you had a lot of dialog, you could organize it into sections<br />
+		      # and then call them.</p>
+<p>Guard SAY "You cannot pass." # [who says it] SAY [what to say]</p>
+<p>OPTION leaveOrFight # OPTION [option_name]<br/>
+1 "Fine." leaveGuard # [option_number] [what_to_say] [what_section_to_run]<br/>
+2 "I must pass." attackGuard<br/>
+ENDOPTION # End the option</p>
+<p>ENDSECTION</p>
+<p>SECTION leaveGuard<br/>
+   guardDead = False<br/>
+   PLAYSOUND "testsound.wav" 1 # PLAYSOUND [sound_file] [number_of_times]<br/>
+   RETURN # End the script<br/>
+ENDSECTION</p>
+<p>SECTION attackGuard<br/>
+   Guard SAY "I will not let you pass."<br/>
+   PC ATTACKGuard # ATTACK [attacker] [victim]<br/>
+   # Assumes that PC did not die because game will end and script will not continue<br/>
+   guardDead = True<br/>
+   PLAYSOUND "testsound2.wav" 2<br/>
+ENDSECTION</p>
+<p>CALLSECTION MainDialog # CALLSECTION [section_name]</p>
+<p>RETURN guardDead # End the script and return whether or not the guard is dead</p>
+</body>
+</html>

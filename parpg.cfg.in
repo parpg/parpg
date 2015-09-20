@@ -1,0 +1,146 @@
+[fife]
+#------------------------------------------------------------------------------
+# Options marked with ? are untested/unknown
+
+# Game window's title (string) DO NOT EDIT!
+WindowTitle = PARPG Techdemo 2
+
+# Icon to use for the game window's border (filename) DO NOT EDIT!
+WindowIcon = window_icon.png
+
+# Video driver to use. (?)
+VideoDriver = ""
+
+# Backend to use for graphics (OpenGL|OpenGLe|SDL)
+RenderBackend = OpenGL 
+
+# Run the game in fullscreen mode or not. (True|False)
+FullScreen = False
+
+# Screen Resolution's width. Not used if FullScreen is set to False 
+# (800|1024|etc)
+ScreenWidth = 1024
+
+# Screen Resolution's height. Not used if FullScreen is set to False 
+# (600|768|etc)
+ScreenHeight = 768
+
+# Screen DPI? (?)
+BitsPerPixel = 0
+
+# ? (?)
+SDLRemoveFakeAlpha = 1
+
+# Use Framebuffer Objects (True|False)
+GLUseFramebuffer = True
+
+# Use NPOT textures (True|False)
+GLUseNPOT = True
+
+# The Sensitivity of the mouse. (-0.99 to 10.0)
+MouseSensitivity = 0.0
+
+# Sets whether the mouse should be accelerated. (True|False)
+MouseAcceleration = False
+
+# Subdirectory to load icons from (path)
+IconsPath = icons
+
+# ? ([R, G, B])
+ColorKey = [250, 0, 250]
+
+# ? (True|False)
+ColorKeyEnabled = False
+
+# Turn on sound effects and music (True|False)
+EnableSound = True
+
+# Initial volume of sound effects and music (0.0-100.0?)
+InitialVolume = 5.0
+
+# Characters to use to render fonts. DO NOT EDIT!
+FontGlyphs = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?-+/():;%&`'*#=[]\""
+
+# Subdirectory to load fronts from (path)
+FontsPath = fonts
+
+# Font to load when game starts
+Font = oldtypewriter.ttf
+
+# Size of in-game fonts
+DefaultFontSize = 12
+
+# ? (?)
+LogModules = [controller]
+
+# ? (?)
+PychanDebug = False
+
+# use Psyco Acceperation (True|False)
+UsePsyco = False
+
+# ? (?)
+ProfilingOn = False
+
+# Lighting Model to use (0-2)
+Lighting = 0
+
+[parpg]
+#------------------------------------------------------------------------------
+
+# System subdirectory to load maps from (path)
+MapsPath = maps
+
+# YAML file that contains the available maps (filename)
+MapsFile = maps.yaml
+
+# Map to load when game starts (filename)
+Map = Mall
+
+# ? (filename)
+AllAgentsFile = all_agents.yaml
+
+# System subdirectory to load objects from (path)
+ObjectsPath = objects
+
+# YAML file that contains the database of availabel objects (filename)
+ObjectDatabaseFile = object_database.yaml
+
+# System subdirectory to load dialogues from (path)
+DialoguesPath = dialogue
+
+# System subdirectory to load quests from (path)
+QuestsPath = quests
+
+# User subdirectory to save screenshots to
+ScreenshotsPath = screenshots
+
+# User subdirectory to save games to
+SavesPath = saves
+
+# System subdirectory where gui files are loaded from (path)
+GuiPath = gui
+
+# System subdirectory where cursors are loaded from (path)
+CursorPath = cursors
+
+# File to use for default cursor (filename)
+CursorDefault = cursor_plain.png
+
+# File to use for up cursor (filename)
+CursorUp = cursor_up.png
+
+# File to use for right cursor (filename)
+CursorRight = cursor_right.png
+
+# File to use for down cursor (filename)
+CursorDown = cursor_down.png
+
+# File to use for left cursor (filename)
+CursorLeft = cursor_left.png
+
+# how many pixles to move the camera per time frame (digit)
+ScrollSpeed = 1.0
+
+# Player walk speed (digit)
+PCSpeed = 3

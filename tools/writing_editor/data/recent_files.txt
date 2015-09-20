@@ -1,0 +1,1 @@
+/home/brett/fife/clients/writingEditor/parpg/writingEditor.py

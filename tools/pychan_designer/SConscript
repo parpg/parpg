@@ -1,0 +1,12 @@
+Import('environment')
+
+install_executable = environment.InstallExecutable(
+    '$TOOLS_DIR/pychan_designer',
+    'pychan_designer.py',
+)
+install_data = environment.InstallReadOnly(
+    '$TOOLS_DIR/pychan_designer',
+    ['fonts', 'gui', 'settings-dist.xml'],
+)
+
+Return([install_executable, install_data])

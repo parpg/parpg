@@ -1,0 +1,38 @@
+SCRIPTNAME "Test Script" # SCRIPTNAME [script_name]
+
+/* Multline comments like C++ */
+
+# Define characters. Kind of like C++ where you declare their class
+NPC Guard
+
+SECTION MainDialog # A section of dialog. If you had a lot of dialog, you could organize it into sections
+		   # and then call them.
+
+Guard SAY "You cannot pass." # [who says it] SAY [what to say]
+
+OPTION leaveOrFight # OPTION [option_name]
+1 "Fine." leaveGuard # [option_number] [what_to_say] [what_section_to_run]
+2 "I must pass." attackGuard
+ENDOPTION # End the option
+
+ENDSECTION
+
+
+SECTION leaveGuard
+   guardDead = False
+   PLAYSOUND "testsound.wav" 1 # PLAYSOUND [sound_file] [number_of_times]
+   RETURN # End the script
+ENDSECTION
+
+SECTION attackGuard
+   SAY Guard "I will not let you pass."
+   PC ATTACK Guard # [attacker] ATTACK [victim]
+   # Assumes that PC did not die because game will end and script will not continue
+   guardDead = True
+   PLAYSOUND "testsound2.wav" 2
+ENDSECTION
+
+
+CALLSECTION MainDialog # CALLSECTION [section_name]
+
+RETURN guardDead # End the script and return whether or not the guard is dead

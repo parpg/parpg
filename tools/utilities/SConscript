@@ -1,0 +1,11 @@
+Import('environment')
+
+install_executables = environment.InstallExecutable(
+    '$TOOLS_DIR/utilities',
+    ['agentXmlGen.py', 'blender_isometric_rendering.py', 'convert_dialogue.py',
+     'dialogueChecker.py', 'dialog_demo.py', 'gfxsplit.py', 'image_scaler.py',
+     'image_slicer.py', 'layer_fill_utility.py', 'parpg-check.py',
+     'transition.py'],
+)
+
+Return(install_executables)

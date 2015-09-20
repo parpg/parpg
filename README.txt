@@ -1,0 +1,120 @@
+=================================================================================
+                            PARPG TECHDEMO 2 README
+                          Last Updated: 6 March 2011
+=================================================================================
+
+== Introduction ==
+Welcome to the second official release of the open source post-apocalyptic RPG undertaking PARPG. This release is based on PARPG SVN trunk revison 877. Built against and tested with FIFE SVN trunk revision 3586.
+
+== Table of contents ==
+01 Important note
+02 Preamble
+03 License
+04 Supported operating systems
+05 How to run PARPG
+06 Keybindings
+07 Settings
+08 Map editor
+09 Known bugs / limitations
+10 How to provide feedback
+11 Acknowlegements
+
+== 01 Important note ==
+The install instructions outlined in this README only apply to official stable releases of PARPG! In case you're reading this file but want to test an SVN version of PARPG, please read the install instructions for SVN versions that found at our project wiki instead: http://wiki.parpg.net/Download#SVN
+
+== 02 Preamble ==
+This preamble has been written to give you an upfront overview of the current status of the project. In the last months the project slowed down considerably and we basically decided that we'll rather release what we have right now instead of trying to implement more features and add more content, risking to collapse before we reach the finish line of the first release.
+
+This said: we didn't manage to fix a number of bugs and didn't reach the original aim to implement a couple of quests that you can actually play through. You can walk around, talk to other characters, change to different (placeholder) maps, listen to background audio tracks and play around with the settings. That's it. It's possible that this is the first and last official PARPG release due the issues we are facing lately. Hopefully this release will help to attract some fresh blood that will get the project back on track. If not, it was at least fun for us to spend a year of our life on such a project and release what we have achieved to the public. And move on after that.
+
+== 03 License ==
+* All Python code is licensed under GPL 3.0. For the full license see: <PARPG>/game/license/gpl30.license
+* Assets are either licensed under Creative Commons 3.0 BY-SA or public domain. For the full licenses see: <PARPG>/game/license/cc30_by_sa.license & <PARPG>/game/license/public_domain.license
+* Most directories contain an <asset>.license file that states under which license the specific assets in the directory are released under and who created them. Use this file to properly attribute developers in case you reuse PARPG assets in your project
+
+== 04 Supported operating systems ==
+PARPG is officially supported in combination with these operating systems:
+* Linux (32 & 64bit)
+* Win32 (32 & 64bit)
+
+PARPG should nevertheless also work with (prolly some tweaks required):
+* FreeBSD (use Linux install instructions)
+* Mac OSX
+* OpenBSD (use Linux install instructions)
+
+== 05 How to run PARPG ==
+=== 05.1 Linux ===
+* Unpack the fife_r3236_src.tar.gz archive to a folder of your choice (called <FIFE> from now on)
+* Install scons using your package manager
+* Install swig using your package manager
+* Install Python 2.5 or 2.6 and a matching version of PyYAML if you don't have them installed yet
+* cd into the <FIFE> directory and run: scons ext && sudo scons install-python
+* In case you encounter any build errors, install the necessary libraries and try these pointers http://wiki.fifengine.de/Building:Linux:SCons
+* Unpack the parpg_td1_r522_src.tar.gz archive to a folder of your choice (called <PARPG> from now on)
+* cd into the <PARPG> directory and run: ./run.py
+
+=== 05.2 Mac ===
+* Unpack the fife_r3236_src.tar.gz archive to a folder of your choice (called <FIFE> from now on)
+* Install scons using macports
+* Install swig using macports
+* Install guichan using macports
+* Install Python 2.5 or 2.6 and a matching version of PyYAML if you don't have them installed yet
+* cd into the <FIFE> directory and run: scons ext && sudo scons install-python
+* In case you encounter any build errors, install the necessary libraries and try these pointers http://wiki.fifengine.de/Building:Mac:Scons
+* Unpack the parpg_td1_r522_src.tar.gz archive to a folder of your choice (called <PARPG> from now on)
+* cd into the <PARPG> directory and run: ./run.py
+
+=== 05.3 Win32 ===
+* Run parpg_td1_r522_win32.exe and install PARPG to a location of your choice (called <PARPG> from now on)
+* Make sure that you've installed (Active)Python 2.6, PyYAML and FIFE (they either ship with the installer or can be downloaded with the help of it)
+* To run PARPG itself, cd into the <PARPG> directory and execute run.py (should be automatically associated with your Python 2.6 interpreter)
+* To run PARPG with file logging, cd into the <PARPG> directory and execute log_parpg.bat; the log will be written to logfile.txt
+
+== 06 Keybindings ==
+* <i> toggles the inventory on and off
+* <t> shows the grid layout
+* <m> toggles music on and off
+* <q> shows quit dialog
+* <F5> shows the grid coordinates
+* <F7> takes a screenshot
+* <F10> shows a debug console
+* <ESC> shows the main menu
+* <PAUSE> (un)pauses the game
+
+== 07 Settings ==
+There are two ways to change the ingame settings like used renderer, resolution, etc.:
+* Press <ESC> and select Options from the menu
+* Edit <PARPG>/game/settings.xml manually, entries are mostly self-explanatory
+
+== 08 Map editor ==
+* To run the PARPG map editor, cd into the PARPG directory and execute parpg_editor.py
+* A work in progress map editor tutorial can be found at http://wiki.parpg.net/Map_editor_tutorial
+
+== 09 Known bugs / limitations ==
+* FPS rate tends to be rather slow on some systems; the FIFE team is working to address this in their view_performance branch, for details see http://forums.parpg.net/index.php?topic=570.0
+* While it's possible to talk to the NPCs, you can't solve any of the quests without using the ingame console (see ticket #229)
+* Some unit tests are broken (see ticket #253)
+* Random music playback hasn't been implemented (see ticket #250)
+* PARPG crashes on exit in combination with Windows Vista 64bit if FIFE is built via MSVC 2005/2008 (see ticket #114 for a workaround)
+* There is no regular main menu, you'll have to use the <ESC> key to access the placeholder menu (see ticket #118)
+* Containers don't support taking everything out of them at once (see ticket #225)
+* You can't drop items onto the ground (see ticket #223)
+* Some map objects are semi-transparent while they should have been rendered opaque (see ticket #251)
+* Full list of open tickets can be found at http://parpg-trac.cvsdude.com/parpg/report/1
+
+== 10 How to provide feedback ==
+You can reach the development team in a couple of ways and provide feedback:
+* PARPG forums: http://forums.parpg.net/
+* PARPG IRC channel: #parpg @ irc.freenode.net (visit http://irc.parpg.net to join the channel via your web browser)
+* PARPG bug tracker: http://bugs.parpg.net
+* PARPG blog: http://blog.parpg.net/
+
+All feedback is welcome!
+
+== 11 Acknowlegements ==
+We thank everyone who supported the project and believed in the idea of creating an old school isometric 2d RPG despite the general trend of more and more higher budget cross platform (read: consoles and win32) 3d RPGs. We do especially want to thank qubodup, a loyal follower who supported the project since its first steps and has helped us by spreading the word about PARPG with his ingame videos and his continued news coverage at http://freegamer.blogspot.com/
+
+Furthermore we want to thank the developers of FIFE, the engine of our choice. Without you this project would not have been possible at all and we're glad that the project is finally in good hands again now. If you want to find out more about FIFE, check out their website http://www.fifengine.net/
+
+The PARPG developers,
+http://www.parpg.net

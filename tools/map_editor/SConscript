@@ -1,0 +1,13 @@
+Import('environment')
+
+install_executable = environment.InstallExecutable(
+    '$TOOLS_DIR/map_editor',
+    'run.py',
+)
+install_data = environment.InstallReadOnly(
+    '$TOOLS_DIR/map_editor',
+    ['fonts', 'gui', 'lang', 'plugins', 'scripts', 'settings-dist.xml',
+     '__init__.py'],
+)
+
+Return([install_executables, install_data])

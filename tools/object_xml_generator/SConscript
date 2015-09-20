@@ -1,0 +1,13 @@
+Import('environment')
+
+install_executables = environment.InstallExecutable(
+    '$TOOLS_DIR/object_xml_generator',
+    ['ObjectXMLGenerator.py', 'ui_xml_object_generator_wizard.py',
+     'xml_object_generator_wizard.py'],
+)
+install_data = environment.InstallReadOnly(
+    '$TOOLS_DIR/object_xml_generator',
+    'xml_object_generator_wizard.ui',
+)
+
+Return([install_executables, install_data])

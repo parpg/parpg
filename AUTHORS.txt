@@ -1,0 +1,58 @@
+List of contributors, sorted by their estimated amount of contributions and impact on the development (descending order). For individual attribution, check the <asset>.license files.
+
+== Audio ==
+* davematney
+* meinmartini
+* timong
+* sindwiller
+* semolina
+* qubodup
+* gary
+
+== Graphics ==
+* sirren
+* gaspard
+* q_x
+* justinoperable
+* lamoot
+* zimble
+* infrared
+* border
+* shrew81
+* comscar
+* continuum
+
+== Mechanics ==
+* zenbitz
+
+== Programming ==
+* maximinus
+* orlandov
+* kaydeth
+* eliedebrauwer
+* b0rland
+* vaporice
+* beliar
+* saritor
+* bretzel13
+* atomic
+* tie
+* meggie
+* pirum
+* andrewbc
+* icelus
+* zenbitz
+* Technomage
+* Aspidites
+* KB1PKL
+
+== Project management ==
+* mvbarracuda
+* shevy
+
+== Writing ==
+* zenbitz
+* shevy
+* nineofhearts
+* dk
+* eleazzaar
