@@ -1,12 +1,9 @@
-=================================================================================
-                            PARPG TECHDEMO 2 README
-                          Last Updated: 6 March 2011
-=================================================================================
+* PARPG
 
-== Introduction ==
+** Introduction
 Welcome to the second official release of the open source post-apocalyptic RPG undertaking PARPG. This release is based on PARPG SVN trunk revison 877. Built against and tested with FIFE SVN trunk revision 3586.
 
-== Table of contents ==
+** Table of contents
 01 Important note
 02 Preamble
 03 License
@@ -19,7 +16,7 @@ Welcome to the second official release of the open source post-apocalyptic RPG u
 10 How to provide feedback
 11 Acknowlegements
 
-== 01 Important note ==
+** 01 Important note
 The install instructions outlined in this README only apply to official stable releases of PARPG! In case you're reading this file but want to test an SVN version of PARPG, please read the install instructions for SVN versions that found at our project wiki instead: http://wiki.parpg.net/Download#SVN
 
 == 02 Preamble ==
